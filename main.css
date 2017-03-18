@@ -1,0 +1,26 @@
+body {
+    font-family: 'Roboto Slab', serif;
+}
+
+input, select, textarea, button{
+    font-family:inherit;
+    font-size: large;
+}
+
+input {
+    width: 5em;
+    text-align: center;
+}
+
+label {
+    display: inline-block;
+    width: 10em;
+}
+
+label, input {
+    float: left;
+}
+
+input + label {
+    clear: left;
+}
