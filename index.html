@@ -4,15 +4,65 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
 </head>
 <body>
-<label for="boxWidth">boxWidth</label><input id="boxWidth" type="text" value="30"/>
-<label for="boxHeight">boxHeight</label><input id="boxHeight" type="text" value="30"/>
-<label for="nBoxesWide">nBoxesWide</label><input id="nBoxesWide" type="text" value="10"/>
-<label for="nBoxesHigh">nBoxesHigh</label><input id="nBoxesHigh" type="text" value="10"/>
-<label for="originColor">originColor (top left)</label><input id="originColor" type="color" value="#ff0000"/>
-<label for="xColor">xColor</label><input id="xColor" type="color" value="#000000"/>
-<label for="yColor">yColor</label><input id="yColor" type="color" value="#ffffff"/>
+
+<div class="flex-container">
+
+<ul id="values">
+    <li>
+        <label for="boxWidth">boxWidth</label>
+        <input id="boxWidth" class="redraws" type="text" value="50"/>
+    </li>
+    <li>
+        <label for="boxHeight">boxHeight</label>
+        <input id="boxHeight" class="redraws" type="text" value="50"/>
+    </li>
+    <li>
+        <label for="nBoxesWide">nBoxesWide</label>
+        <input id="nBoxesWide" class="redraws" type="text" value="7"/>
+    </li>
+    <li>
+        <label for="nBoxesHigh">nBoxesHigh</label>
+        <input id="nBoxesHigh" class="redraws" type="text" value="9"/>
+    </li>
+    <li>
+        <label for="topLeftColor">topLeftColor</label>
+        <input id="topLeftColor" class="redraws" type="color" value="#71bbc1"/>
+    </li>
+    <li>
+        <label for="topRightColor">topRightColor</label>
+        <input id="topRightColor" class="redraws" type="color" value="#f2d959"/>
+    </li>
+    <li>
+        <label for="bottomLeftColor">bottomLeftColor</label>
+        <input id="bottomLeftColor" class="redraws" type="color" value="#0139da"/>
+    </li>
+    <li>
+        <label for="bottomRightColor">bottomRightColor</label>
+        <input id="bottomRightColor" class="redraws" type="color" value="#f47952"/>
+    </li>
+    <li>
+        <label for="interpolator">interpolator</label>
+        <select class="redraws" id="interpolator">
+            <option value="interpolateRgb" selected>interpolateRgb</option>
+            <option value="interpolateHsl">interpolateHsl</option>
+            <option value="interpolateHslLong">interpolateHslLong</option>
+            <option value="interpolateLab">interpolateLab</option>
+            <option value="interpolateHcl">interpolateHcl</option>
+            <option value="interpolateHclLong">interpolateHclLong</option>
+            <option value="interpolateCubehelix">interpolateCubehelix</option>
+            <option value="interpolateCubehelixLong">interpolateCubehelixLong</option>
+        </select>
+    </li>
+    <li>
+        <label for="showIndexes">showIndexes</label>
+        <input id="showIndexes" type="checkbox"/>
+    </li>
+</ul>
+
+<svg id="hue"></svg>
+
+</div>
 
 <script src="dist/bundle.js"></script>
-<svg id="hue"></svg>
 </body>
 </html>

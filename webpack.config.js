@@ -1,8 +1,8 @@
-const  path = require("path");
+const path = require("path");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
-  devtool: "cheap-eval-source-map",
+  devtool: "source-map",
   entry: './app.js',
   output: {
     filename: 'bundle.js',
@@ -11,7 +11,8 @@ module.exports = {
   devServer: {
     watchContentBase: true,
     publicPath: "/dist/",
-    overlay: true
+    overlay: true,
+    host: "0.0.0.0"
   },
   module: {
     rules: [
@@ -23,10 +24,10 @@ module.exports = {
         })
       },
       {
-        test: require.resolve('d3'),
+        test: require.resolve('./hue.js'),
         use: [{
           loader: 'expose-loader',
-          options: 'd3'
+          options: 'hue'
         }]
       }
     ]

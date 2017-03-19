@@ -4,23 +4,60 @@ body {
 
 input, select, textarea, button{
     font-family:inherit;
-    font-size: large;
+    font-size: 1em;
 }
 
 input {
-    width: 5em;
+    width: 2em;
     text-align: center;
+}
+
+select {
+    width: 12em;
 }
 
 label {
     display: inline-block;
     width: 10em;
+    text-align: left;
 }
 
-label, input {
-    float: left;
+li {
+    list-style-type: none;
+ }
+
+svg {
+    padding: 2em;
+    border: 2px solid black;
 }
 
-input + label {
-    clear: left;
+ul {
+    display: inline-block;
+}
+
+.indexText {
+    display: none;
+}
+
+.indexText.visibleIndex {
+    display: block;
+}
+
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-container > * {
+    margin: 2em;
+}
+
+.cursor {
+    fill: none;
+    stroke: black;
+    stroke-opacity: 0.5;
+    stroke-width: 1px;
+    stroke-dasharray: 5, 20;
 }
